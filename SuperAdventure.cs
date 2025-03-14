@@ -461,5 +461,15 @@ namespace SuperAdventure
         {
 
         }
+
+        private void btnUseWeapon_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUse1potion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

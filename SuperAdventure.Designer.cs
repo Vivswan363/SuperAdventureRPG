@@ -44,7 +44,7 @@
             this.btnWest = new System.Windows.Forms.Button();
             this.btnSouth = new System.Windows.Forms.Button();
             this.btnUseWeapon = new System.Windows.Forms.Button();
-            this.btnUse1potion = new System.Windows.Forms.Button();
+            this.btnUsePotion = new System.Windows.Forms.Button();
             this.rtbLocation = new System.Windows.Forms.RichTextBox();
             this.rtbMessages = new System.Windows.Forms.RichTextBox();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
@@ -190,15 +190,17 @@
             this.btnUseWeapon.TabIndex = 15;
             this.btnUseWeapon.Text = "Use";
             this.btnUseWeapon.UseVisualStyleBackColor = true;
+            this.btnUseWeapon.Click += new System.EventHandler(this.btnUseWeapon_Click_1);
             // 
-            // btnUse1potion
+            // btnUsePotion
             // 
-            this.btnUse1potion.Location = new System.Drawing.Point(620, 593);
-            this.btnUse1potion.Name = "btnUse1potion";
-            this.btnUse1potion.Size = new System.Drawing.Size(75, 23);
-            this.btnUse1potion.TabIndex = 16;
-            this.btnUse1potion.Text = "Use";
-            this.btnUse1potion.UseVisualStyleBackColor = true;
+            this.btnUsePotion.Location = new System.Drawing.Point(620, 593);
+            this.btnUsePotion.Name = "btnUsePotion";
+            this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
+            this.btnUsePotion.TabIndex = 16;
+            this.btnUsePotion.Text = "Use";
+            this.btnUsePotion.UseVisualStyleBackColor = true;
+            this.btnUsePotion.Click += new System.EventHandler(this.btnUse1potion_Click);
             // 
             // rtbLocation
             // 
@@ -261,7 +263,7 @@
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
             this.Controls.Add(this.rtbLocation);
-            this.Controls.Add(this.btnUse1potion);
+            this.Controls.Add(this.btnUsePotion);
             this.Controls.Add(this.btnUseWeapon);
             this.Controls.Add(this.btnSouth);
             this.Controls.Add(this.btnWest);
@@ -305,7 +307,7 @@
         private System.Windows.Forms.Button btnWest;
         private System.Windows.Forms.Button btnSouth;
         private System.Windows.Forms.Button btnUseWeapon;
-        private System.Windows.Forms.Button btnUse1potion;
+        private System.Windows.Forms.Button btnUsePotion;
         private System.Windows.Forms.RichTextBox rtbLocation;
         private System.Windows.Forms.RichTextBox rtbMessages;
         private System.Windows.Forms.DataGridView dgvInventory;
