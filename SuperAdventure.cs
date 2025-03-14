@@ -42,6 +42,7 @@ namespace SuperAdventure
         private void MoveTo(Location newLocation)
         {
             //Does the location have any required items
+            rtbLocation.Text += "entering a new location";
             if (!_player.HasRequiredItemToEnterThisLocation(newLocation))
             {
                 rtbMessages.Text += "You must have a " + newLocation.ItemRequiredToEnter.Name + " to enter this location." + Environment.NewLine;
@@ -51,13 +52,13 @@ namespace SuperAdventure
             // Update the player's current location
             _player.CurrentLocation = newLocation;
 
-            if (newLocation == null) return;
+            //if (newLocation == null) return;
             
             // Show/hide available movement buttons
-            //btnNorth.Visible = (newLocation.LocationToNorth != null);
-            //btnEast.Visible = (newLocation.LocationToEast != null);
-            //btnSouth.Visible = (newLocation.LocationToSouth != null);
-            //btnWest.Visible = (newLocation.LocationToWest != null);
+            btnNorth.Visible = (newLocation.LocationToNorth != null);
+            btnEast.Visible = (newLocation.LocationToEast != null);
+            btnSouth.Visible = (newLocation.LocationToSouth != null);
+            btnWest.Visible = (newLocation.LocationToWest != null);
 
             // Display current location name and description
             rtbLocation.Text = newLocation.Name + Environment.NewLine;
